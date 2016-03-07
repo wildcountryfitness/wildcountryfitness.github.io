@@ -1,0 +1,13 @@
+%header.site-header
+  .wrapper
+    %a.site-title {{ site.title }}
+
+    %nav.site-nav
+      %a.menu-icon {% include images/menu-icon.svg %}
+
+      .trigger
+        {% for my_page in site.pages %}
+        {% if my_page.title %}
+        %a.page-link {{ my_page.title }}
+        {% endif %}
+        {% endfor %}

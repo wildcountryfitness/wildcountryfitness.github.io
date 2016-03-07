@@ -1,0 +1,44 @@
+verify_signatures: false
+gemfile: '.overcommit_gems.rb'
+
+PreCommit:
+  SlimLint:
+    enabled: true
+    on_warn: fail
+
+  CoffeeLint:
+    enabled: true
+    on_warn: fail
+
+  JsHint:
+    enabled: true
+    on_warn: fail
+
+  ScssLint:
+    enabled: true
+    on_warn: fail
+    exclude:
+      - 'css/*.scss'
+
+  YamlSyntax:
+    enabled: true
+    on_warn: fail
+
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - '**/*.md'
+      - '**/*.markdown'
+
+  ImageOptim:
+    enabled: true
+    include:
+      - '**/*.gif'
+      - '**/*.jpeg'
+      - '**/*.jpg'
+      - '**/*.png'
+      - '**/*.webp'
+      - '**/*.svg'
+
+  HardTabs:
+    enabled: true
