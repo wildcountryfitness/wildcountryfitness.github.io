@@ -1,13 +1,14 @@
 %header.site-header
   .wrapper
-    %a.site-title {{ site.title }}
+    %a.site-title{ href: '{{ "/" | prepend: site.baseurl }}' }
+      {{ site.title }}
 
     %nav.site-nav
       %a.menu-icon {% include images/menu-icon.svg %}
 
       .trigger
-        {% for my_page in site.pages %}
-        {% if my_page.title %}
-        %a.page-link {{ my_page.title }}
+        {% for pg in site.pages %}
+        {% if pg.title %}
+        %a.page-link{ href: '{{ pg.url | prepend: site.baseurl }}' } {{ pg.title }}
         {% endif %}
         {% endfor %}

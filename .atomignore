@@ -1,0 +1,4 @@
+*.html
+/.*
+!/.atomignore
+coffeelint.json

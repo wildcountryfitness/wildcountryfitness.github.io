@@ -18,9 +18,6 @@ twitter_username: TODO-twitter
 facebook_username: TODO-facebook
 timezone: Europe/London
 environment: production
-safe: true
-
-exclude: ['*.html.haml', 'js/**/*', 'css/**/*', 'Gemfile', 'Gemfile.lock', 'Rakefile', 'Guardfile']
 
 # paginate: 5
 # paginate_path: "/our_blog/page:num/"
@@ -28,5 +25,22 @@ exclude: ['*.html.haml', 'js/**/*', 'css/**/*', 'Gemfile', 'Gemfile.lock', 'Rake
 # Build settings
 markdown: kramdown
 
+kramdown:
+  input: GFM
+
+gems:
+  - jekyll-coffeescript
+
 sass:
   style: :compressed
+
+exclude:
+  - '*.html.haml'
+  - 'js/**/*'
+  - 'css/**/*'
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - Guardfile
+  - README.md
+  - _config_dev.yml

@@ -58,6 +58,7 @@ DEPENDENCIES
   image_optim
   image_optim_pack
   overcommit
+  rubocop
   scss_lint
 
 BUNDLED WITH
