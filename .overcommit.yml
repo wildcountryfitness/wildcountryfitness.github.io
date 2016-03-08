@@ -28,6 +28,7 @@ PreCommit:
     on_warn: fail
     exclude:
       - 'css/*.scss'
+      - '_sass/vendor/**/*'
 
   YamlSyntax:
     enabled: true
