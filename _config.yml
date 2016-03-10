@@ -14,6 +14,7 @@ environment: production
 
 title: Wild Country Fitness
 email: info@wildcountryfitness.com
+author: Lesley Waldron
 description: > # this means to ignore newlines
   Wild Country Fitness offers personal training, running workshops,
   run coaching, wellness retreats, small group training

@@ -1,33 +1,33 @@
-%head
-  %meta{ charset: 'utf-8' }
-  %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
-  %meta{ name: 'viewport',
-         content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
-  -#
-    The above 3 meta tags *must* come first in the head;
-    any other head content must come *after* these tags
+%meta{ charset: 'utf-8' }
+%meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+%meta{ name: 'viewport',
+       content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+-#
+  The above 3 meta tags *must* come first in the head;
+  any other head content must come *after* these tags
 
-  %title
-    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+%title
+  {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
-  :ruby
-    desc =
-      '{% if page.excerpt %}' \
-        '{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}' \
-      '{% else %}' \
-        '{{ site.description }}' \
-      '{% endif %}'
+:ruby
+  desc =
+    '{% if page.excerpt %}' \
+      '{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}' \
+    '{% else %}' \
+      '{{ site.description }}' \
+    '{% endif %}'
 
-  %meta{ name: 'description', content: desc }
+%meta{ name: 'description', content: desc }
+%meta{ name: 'author', content: '{{ site.author }}' }
 
-  %link{ rel: 'stylesheet', href: '{{ "/css/application.css" | prepend: site.baseurl }}' }
+%link{ rel: 'stylesheet', href: '{{ "/css/application.css" | prepend: site.baseurl }}' }
 
-  :ruby
-    canonical = '{{ page.url | replace: "index.html", "" | ' \
-                'prepend: site.baseurl | prepend: site.url }}'
+:ruby
+  canonical = '{{ page.url | replace: "index.html", "" | ' \
+              'prepend: site.baseurl | prepend: site.url }}'
 
-  %link{ rel: 'canonical', href: canonical }
+%link{ rel: 'canonical', href: canonical }
 
-  %link{ rel: 'alternate', type: 'application/rss+xml',
-         title: '{{ site.title }}',
-         href: '{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}' }
+%link{ rel: 'alternate', type: 'application/rss+xml',
+       title: '{{ site.title }}',
+       href: '{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}' }

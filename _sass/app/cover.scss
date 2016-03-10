@@ -28,12 +28,13 @@ a:hover {
 ///// Base structure
 
 html,
-body {
-  background-color: $color0;
+body,
+main {
   height: 100%;
 }
 
-body {
+main {
+  background-color: $color0;
   color: $white;
   text-align: center;
   text-shadow: 0 .05rem .1rem $color1;

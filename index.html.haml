@@ -3,22 +3,13 @@
   layout: default
   ---
 
-.home
-  %h1.page-heading Posts
+%h1.cover-heading Cover your page.
 
-  %ul.post-list
-    {% for post in site.posts %}
-    %li
-      %span.post-meta
-        {{ post.date | date: "%b %-d, %Y" }}
+%p.lead
+  Cover is a one-page template for building simple and
+  beautiful home pages. Download, edit the text,
+  and add your own fullscreen background photo
+  to make it your own.
 
-      %h2
-        %a.post-link{ href: '{{ post.url | prepend: site.baseurl }}' }
-          {{ post.title }}
-    {% endfor %}
-
-  %p.rss-subscribe
-    subscribe
-
-    %a{ href: '{{ "/feed.xml" | prepend: site.baseurl }}' }
-      via RSS
+%p.lead
+  %a.btn.btn-lg.btn-secondary{ href: '#' } Learn more

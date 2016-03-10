@@ -1,11 +1,16 @@
 !!! 5
 %html.no-js{ lang: 'en' }
-  {% include layouts/head.html %}
+  %head {% include layouts/head.html %}
+
   %body
-    {% include layouts/header.html %}
+    %main
+      .site-wrapper
+        .site-wrapper-inner
+          .cover-container
+            {% include layouts/header.html %}
 
-    .page-content
-      .wrapper {{ content }}
+            .inner.cover {{ content }}
 
-    {% include layouts/footer.html %}
+            {% include layouts/footer.html %}
+
     {% include layouts/bottom.html %}

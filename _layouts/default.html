@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  {% include layouts/head.html %}
+  <head>{% include layouts/head.html %}</head>
   <body>
-    {% include layouts/header.html %}
-    <div class="page-content">
-      <div class="wrapper">{{ content }}</div>
-    </div>
-    {% include layouts/footer.html %}
+    <main>
+      <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+          <div class="cover-container">
+            {% include layouts/header.html %}
+            <div class="inner cover">{{ content }}</div>
+            {% include layouts/footer.html %}
+          </div>
+        </div>
+      </div>
+    </main>
     {% include layouts/bottom.html %}
   </body>
 </html>
