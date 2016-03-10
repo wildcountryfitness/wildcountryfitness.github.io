@@ -13,7 +13,7 @@ timezone: Europe/London
 environment: production
 
 title: Wild Country Fitness
-email: info@wildcountryfitness.com
+
 author: Lesley Waldron
 description: > # this means to ignore newlines
   Wild Country Fitness offers personal training, running workshops,
@@ -21,9 +21,9 @@ description: > # this means to ignore newlines
   and self-care workshops in Bristol and North Somerset.
 
 email: wildcountryfit@gmail.com
-twitter_username: wildcountryfit
-facebook_username: wildcountryfitness
-instagram_username: wildcountryfit
+twitter: wildcountryfit
+facebook: wildcountryfitness
+instagram: wildcountryfit
 
 # paginate: 5
 # paginate_path: "/our_blog/page:num/"

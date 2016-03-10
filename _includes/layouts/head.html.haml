@@ -20,7 +20,7 @@
 %meta{ name: 'description', content: desc }
 %meta{ name: 'author', content: '{{ site.author }}' }
 
-%link{ rel: 'stylesheet', href: '{{ "/css/application.css" | prepend: site.baseurl }}' }
+%link{ rel: 'stylesheet', href: '{{ "/css/app.css" | prepend: site.baseurl }}' }
 
 :ruby
   canonical = '{{ page.url | replace: "index.html", "" | ' \

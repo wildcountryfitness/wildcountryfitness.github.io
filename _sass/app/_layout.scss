@@ -3,8 +3,7 @@
 
 .site-environment {
   background-color: $brand-warning;
-  border-top-left-radius: $border-radius;
-  bottom: 0;
+  border-bottom-left-radius: $border-radius;
   color: $white;
   font-size: .7rem;
   line-height: 0;
@@ -12,6 +11,21 @@
   position: fixed;
   right: 0;
   text-align: center;
+  top: 0;
   z-index: 10000;
+
   &.production { display: none; }
+}
+
+.svg-icon {
+  > svg {
+    display: inline-block;
+    height: 2rem;
+    vertical-align: middle;
+    width: 2rem;
+
+    path {
+      fill: $white;
+    }
+  }
 }
