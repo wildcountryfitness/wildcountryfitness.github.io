@@ -1,14 +1,14 @@
 %header.site-header
-  .wrapper
-    %a.site-title{ href: '{{ "/" | prepend: site.baseurl }}' }
-      {{ site.title }}
-
-    %nav.site-nav
-      %a.menu-icon {% include images/menu-icon.svg %}
-
-      .trigger
-        {% for pg in site.pages %}
-        {% if pg.title %}
-        %a.page-link{ href: '{{ pg.url | prepend: site.baseurl }}' } {{ pg.title }}
-        {% endif %}
-        {% endfor %}
+  -# .wrapper
+  -#   %a.site-title{ href: '{{ "/" | prepend: site.baseurl }}' }
+  -#     {{ site.title }}
+  -#
+  -#   %nav.site-nav
+  -#     %a.menu-icon {% include images/menu-icon.svg %}
+  -#
+  -#     .trigger
+  -#       {% for pg in site.pages %}
+  -#       {% if pg.title %}
+  -#       %a.page-link{ href: '{{ pg.url | prepend: site.baseurl }}' } {{ pg.title }}
+  -#       {% endif %}
+  -#       {% endfor %}

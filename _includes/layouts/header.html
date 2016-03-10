@@ -1,17 +1,2 @@
 <header class="site-header">
-  <div class="wrapper">
-    <a class="site-title" href='{{ "/" | prepend: site.baseurl }}'>
-      {{ site.title }}
-    </a>
-    <nav class="site-nav">
-      <a class="menu-icon">{% include images/menu-icon.svg %}</a>
-      <div class="trigger">
-        {% for pg in site.pages %}
-        {% if pg.title %}
-        <a class="page-link" href="{{ pg.url | prepend: site.baseurl }}">{{ pg.title }}</a>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-  </div>
 </header>

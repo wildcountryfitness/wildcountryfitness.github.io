@@ -1,2 +1,10 @@
 <script charset="utf-8" src='{{ "/js/vendor.js" | prepend: site.baseurl }}'></script>
 <script charset="utf-8" src='{{ "/js/app.js" | prepend: site.baseurl }}'></script>
+<div class="site-environment {{ site.environment }}">
+{{ site.environment }}
+<span class="hidden-sm-up">[x-small]</span>
+<span class="hidden-md-up hidden-xs-down">[small]</span>
+<span class="hidden-lg-up hidden-sm-down">[medium]</span>
+<span class="hidden-xl-up hidden-md-down">[large]</span>
+<span class="hidden-lg-down">[x-large]</span>
+</div>

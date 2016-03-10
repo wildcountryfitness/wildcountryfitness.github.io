@@ -1,0 +1,17 @@
+@import 'vendor/bootstrap/variables';
+@import 'app/variables';
+
+.site-environment {
+  background-color: $brand-warning;
+  border-top-left-radius: $border-radius;
+  bottom: 0;
+  color: $white;
+  font-size: .7rem;
+  line-height: 0;
+  padding: .7rem;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 10000;
+  &.production { display: none; }
+}
