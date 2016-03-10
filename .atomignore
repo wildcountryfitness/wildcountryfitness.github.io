@@ -1,4 +1,6 @@
-*.html
-# /.*
+/.*
 !/.atomignore
+# !/.gitignore
+
+*.html
 coffeelint.json

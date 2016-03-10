@@ -1,3 +1,5 @@
+notification :off
+
 group :frontend do
   # Sample guardfile block for Guard::Haml
   # You can use some options to change guard-haml configuration
