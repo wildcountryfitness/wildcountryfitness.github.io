@@ -1,6 +1,12 @@
+# Ignore all 'dotfiles'
 /.*
+
+# Show .*ignore files
 !/.atomignore
 # !/.gitignore
 
+# Ignore html files, as they are compiled from *.html.haml files using `rake build`
 *.html
+
+# Ignore coffeelint config file
 coffeelint.json

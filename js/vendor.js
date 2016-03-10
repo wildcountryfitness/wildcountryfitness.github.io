@@ -4,15 +4,15 @@
 
 {% comment %}
   {% include_relative vendor/tether.min.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/util.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/alert.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/button.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/carousel.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/collapse.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/dropdown.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/modal.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/scrollspy.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/tab.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/tooltip.js %}
-  {% include_relative vendor/bootstrap-4.0.0-alpha.2/popover.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/util.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/alert.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/button.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/carousel.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/collapse.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/dropdown.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/modal.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/scrollspy.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/tab.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/tooltip.min.js %}
+  {% include_relative vendor/bootstrap-4.0.0-alpha.2/popover.min.js %}
 {% endcomment %}
