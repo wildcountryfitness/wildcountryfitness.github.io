@@ -1,0 +1,165 @@
+@import 'app/variables';
+
+$color0: #333;
+$color1: rgba(0, 0, 0, .5);
+$color2: rgba(255, 255, 255, .5);
+$color3: rgba(255, 255, 255, .25);
+
+//// Globals
+
+// Links
+a,
+a:focus,
+a:hover {
+  color: $white;
+}
+
+// Custom default button
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  // Prevent inheritance from `body`
+  background-color: $white;
+  border: .05rem solid $white;
+  color: $color0;
+  text-shadow: none;
+}
+
+///// Base structure
+
+html,
+body {
+  background-color: $color0;
+  height: 100%;
+}
+
+body {
+  color: $white;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem $color1;
+}
+
+// Extra markup and styles for table-esque vertical and horizontal centering
+.site-wrapper {
+  // scss-lint:disable VendorPrefix
+  -webkit-box-shadow: inset 0 0 5rem $color1;
+  box-shadow: inset 0 0 5rem $color1;
+  display: table;
+
+  height: 100%;
+
+  // For at least Firefox
+  min-height: 100%;
+
+  width: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Padding for spacing
+.inner {
+  padding: 2rem;
+}
+
+//// Header
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead {
+  .nav-link {
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    color: $color2;
+    font-weight: bold;
+    padding: .25rem 0;
+
+    + .nav-link {
+      margin-left: 1rem;
+    }
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    border-bottom-color: $color3;
+  }
+
+  .active {
+    border-bottom-color: $white;
+    color: $white;
+  }
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+
+  .nav-masthead {
+    float: right;
+  }
+}
+
+// Cover
+
+.cover {
+  padding: 0 1.5rem;
+
+  .btn-lg {
+    font-weight: bold;
+    padding: .75rem 1.25rem;
+  }
+}
+
+//// Footer
+
+.mastfoot {
+  color: $color2;
+}
+
+/// Affix and center
+
+@media (min-width: 40em) {
+  // Pull out the header and footer
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+
+  .mastfoot {
+    bottom: 0;
+    position: fixed;
+  }
+  // Start the vertical centering
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  // Handle the widths
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+    // Must be percentage or pixels for horizontal alignment
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 42rem;
+  }
+}
