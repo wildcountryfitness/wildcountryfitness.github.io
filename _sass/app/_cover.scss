@@ -34,14 +34,10 @@ main {
   height: 100%;
 }
 
-main {
+body {
   $image: 'e_brightness:-15,f_auto/v1457619652/field_ywfyku.jpg';
   background: $color0 url('#{$cloudinary-url}/c_scale,w_1440/#{$image}') no-repeat fixed center;
-
   background-color: $color0;
-  color: $white;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem $color1;
 
   @include media-breakpoint-down(xs) {
     background-image: url('#{$cloudinary-url}/c_scale,w_#{strip-unit(breakpoint-max(sm))}/#{$image}');
@@ -60,6 +56,13 @@ main {
     background-size: cover;
   }
 }
+
+main {
+  color: $white;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem $color1;
+}
+
 
 
 // Extra markup and styles for table-esque vertical and horizontal centering
