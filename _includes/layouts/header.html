@@ -1,13 +1,17 @@
 <header class="masthead clearfix">
 <div class="inner">
+{% unless page.path == 'index.html' %}
 <h3 class="masthead-brand">
 <a href="{{ '/' | prepend: site.baseurl }}">
 {{ site.title }}
 </a>
 </h3>
+{% endunless %}
 <nav class="nav nav-masthead">
+{% unless page.path == 'index.html' %}
 <a class="nav-link" href="{{ '/' | prepend: site.baseurl }}">Home</a>
 <a class="nav-link" style="visibility: hidden">&nbsp;</a>
+{% endunless %}
 <a class="nav-link" href="{{ '/contact_us/' | prepend: site.baseurl }}">
 Contact us
 </a>

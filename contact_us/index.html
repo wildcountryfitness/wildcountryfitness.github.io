@@ -6,7 +6,7 @@ title: Contact Us
 <form action="https://formspree.io/{{site.email}}" id="contact_us" method="POST">
 <input name="_gotcha" style="display:none" type="text">
 <input name="_subject" type="hidden" value="{{site.title}} enquiry">
-<input name="_next" type="hidden" value="{{ '/contact_us/thanks.html' | | prepend: site.baseurl | prepend: site.url }}">
+<input name="_next" type="hidden" value="{{ '/contact_us/thanks/' | | prepend: site.baseurl | prepend: site.url }}">
 <fieldset class="form-group">
 <label for="name">Name</label>
 <input autocorrect="off" class="form-control" name="name" placeholder="Please tell us your name" required="" spellcheck="off" tabindex="1" type="text">

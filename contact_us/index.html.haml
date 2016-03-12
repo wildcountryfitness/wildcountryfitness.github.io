@@ -12,7 +12,7 @@
   %input{ type: 'hidden', name: '_subject', value: '{{site.title}} enquiry' }
 
   :ruby
-    next_value = "{{ '/contact_us/thanks.html' | " \
+    next_value = "{{ '/contact_us/thanks/' | " \
                  '| prepend: site.baseurl | prepend: site.url }}'
 
   %input{ type: 'hidden', name: '_next', value: next_value }

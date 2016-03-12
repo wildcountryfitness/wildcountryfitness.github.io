@@ -1,3 +1,6 @@
+# Ignore jekyll front matter
+preprocess_command: "sed '1,2s/---//'"
+
 linters:
   SingleLinePerSelector:
     enabled: false
@@ -5,3 +8,4 @@ linters:
   BorderZero:
     enabled: true
     convention: none # or "zero"
+

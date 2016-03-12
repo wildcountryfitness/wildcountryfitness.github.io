@@ -6,10 +6,14 @@
   The above 3 meta tags *must* come first in the head;
   any other head content must come *after* these tags
 
-%title
-  {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-
 :ruby
+  title =
+    '{% if page.title %}' \
+      '{{ page.title }} • {{ site.title }}' \
+    '{% else %}' \
+      '{{ site.title }}' \
+    '{% endif %}'
+
   desc =
     '{% if page.excerpt %}' \
       '{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}' \
@@ -17,19 +21,18 @@
       '{{ site.description | strip_newlines }}' \
     '{% endif %}'
 
+  canonical = '{{ page.url | replace: "index.html", "" | ' \
+              'prepend: site.baseurl | prepend: site.url }}'
+
+%title= title
 %meta{ name: 'description', content: desc }
 %meta{ name: 'author', content: '{{ site.author }}' }
 
 %link{ rel: 'stylesheet', href: '{{ "/css/app.css" | prepend: site.baseurl }}' }
 
-:ruby
-  canonical = '{{ page.url | replace: "index.html", "" | ' \
-              'prepend: site.baseurl | prepend: site.url }}'
-
 %link{ rel: 'canonical', href: canonical }
 
-%link{ rel: 'alternate', type: 'application/rss+xml',
-       title: '{{ site.title }}',
+%link{ rel: 'alternate', type: 'application/rss+xml', title: '{{ site.title }}',
        href: '{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}' }
 
 %link{ rel: 'icon', href: '/images/favicon.ico' }

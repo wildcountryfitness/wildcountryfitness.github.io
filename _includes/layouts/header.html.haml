@@ -1,11 +1,16 @@
 %header.masthead.clearfix
   .inner
+    {% unless page.path == 'index.html' %}
     %h3.masthead-brand
       %a{ href: "{{ '/' | prepend: site.baseurl }}" }
         {{ site.title }}
+    {% endunless %}
 
     %nav.nav.nav-masthead
+      {% unless page.path == 'index.html' %}
       %a.nav-link{ href: "{{ '/' | prepend: site.baseurl }}" } Home
       %a.nav-link{ style: 'visibility: hidden' } &nbsp;
+      {% endunless %}
+
       %a.nav-link{ href: "{{ '/contact_us/' | prepend: site.baseurl }}" }
         Contact us
