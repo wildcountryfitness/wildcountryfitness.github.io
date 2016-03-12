@@ -1,0 +1,23 @@
+---
+layout: default
+title: Contact Us
+---
+<h1>{{ page.title }}</h1>
+<form action="https://formspree.io/{{site.email}}" id="contact_us" method="POST">
+  <input name="_gotcha" style="display:none" type="text">
+  <input name="_subject" type="hidden" value="{{site.title}} enquiry">
+  <input name="_next" type="hidden" value="{{ '/contact_us/thanks.html' | | prepend: site.baseurl | prepend: site.url }}">
+  <fieldset class="form-group">
+    <label for="name">Name</label>
+    <input autocorrect="off" class="form-control" name="name" placeholder="Please tell us your name" required="" spellcheck="off" tabindex="1" type="text">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="email">Email address</label>
+    <input autocapitalize="off" autocorrect="off" class="form-control" name="email" placeholder="What is your email address?" required="" spellcheck="off" tabindex="2" type="email">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="message">Message</label>
+    <textarea class="form-control" name="body" placeholder="Please tell us what you are enquiring about..." required="" rows="5" tabindex="4"></textarea>
+  </fieldset>
+  <input class="btn btn-lg btn-secondary" tabindex="5" type="submit" value="Send">
+</form>

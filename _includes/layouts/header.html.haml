@@ -1,9 +1,11 @@
 %header.masthead.clearfix
   .inner
     %h3.masthead-brand
-      -# {{ site.title }}
+      %a{ href: "{{ '/' | prepend: site.baseurl }}" }
+        {{ site.title }}
 
-    -# %nav.nav.nav-masthead
-    -#   %a.nav-link.active{ href: '#' } Home
-    -#   %a.nav-link{ href: '#' } Features
-    -#   %a.nav-link{ href: '#' } Contact
+    %nav.nav.nav-masthead
+      %a.nav-link{ href: "{{ '/' | prepend: site.baseurl }}" } Home
+      %a.nav-link{ style: 'visibility: hidden' } &nbsp;
+      %a.nav-link{ href: "{{ '/contact_us' | prepend: site.baseurl }}" }
+        Contact us

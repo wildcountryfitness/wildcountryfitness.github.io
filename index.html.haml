@@ -22,7 +22,7 @@
   you feel well and thrive in your busy lives.
 
 %br
-
--#
-  %p.lead
-    %a.btn.btn-lg.btn-secondary{ href: '#' } Learn more
+%p.lead
+  - href = "{{ '/contact_us' | prepend: site.baseurl | prepend: site.url }}"
+  %a.btn.btn-lg.btn-secondary{ href: href }
+    Contact us
