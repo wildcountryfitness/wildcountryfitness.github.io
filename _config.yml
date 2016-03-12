@@ -7,7 +7,7 @@
 
 ### Site settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.wildcountryfitness.com" # the base hostname & protocol for your site
+url: "https://www.wildcountryfitness.com" # the base hostname & protocol for your site
 
 timezone: Europe/London
 environment: production
@@ -19,7 +19,6 @@ description: > # this means to ignore newlines
   Wild Country Fitness offers personal training, running workshops,
   run coaching, wellness retreats, small group training
   and self-care workshops in Bristol and North Somerset.
-
 email: wildcountryfit@gmail.com
 twitter: wildcountryfit
 facebook: wildcountryfitness
