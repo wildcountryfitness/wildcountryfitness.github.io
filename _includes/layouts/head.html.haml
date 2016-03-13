@@ -21,18 +21,18 @@
       '{{ site.description | strip_newlines }}' \
     '{% endif %}'
 
-  canonical = '{{ page.url | replace: "index.html", "" | ' \
+  canonical = "{{ page.url | replace: 'index.html', '' | " \
               'prepend: site.baseurl | prepend: site.url }}'
 
 %title= title
 %meta{ name: 'description', content: desc }
 %meta{ name: 'author', content: '{{ site.author }}' }
 
-%link{ rel: 'stylesheet', href: '{{ "/css/app.css" | prepend: site.baseurl }}' }
+%link{ rel: 'stylesheet', href: "{{ '/css/app.css' | prepend: site.baseurl }}" }
 
 %link{ rel: 'canonical', href: canonical }
 
 %link{ rel: 'alternate', type: 'application/rss+xml', title: '{{ site.title }}',
-       href: '{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}' }
+       href: "{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" }
 
 %link{ rel: 'icon', href: '/images/favicon.ico' }
